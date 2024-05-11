@@ -12,3 +12,18 @@ export type PuckComponentConfig<
   ComponentConfig<TProps, TState, Omit<ComponentData<TData>, "type">>,
   "type"
 >;
+interface Font {
+  family: string;
+  displayName: string; // User-friendly name for the dropdown
+}
+
+interface Image {
+  id: null | undefined | any;
+  url: string;
+  alt?: string;
+}
+
+export interface ThemeConfig {
+  fonts: Font[];
+  images: Image[];
+}
